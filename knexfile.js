@@ -13,11 +13,11 @@ module.exports = {
     },
     
     //? Only needed when foreign_keys are needed ?//
-		// pool: {
-		// 	afterCreate: (conn, done) => {
-		// 		conn.run('PRAGMA foreign_keys = OFF', done);
-		// 	},
-		// },
+		pool: {
+			afterCreate: (conn, done) => {
+				conn.run('PRAGMA foreign_keys = OFF', done);
+			},
+		},
 	},
 	testing: {
 		client: 'sqlite3',
@@ -33,11 +33,11 @@ module.exports = {
     },
     
     //? Only needed when foreign_keys are needed ?//
-		// pool: {
-		// 	afterCreate: (conn, done) => {
-		// 		conn.run('PRAGMA foreign_keys = OFF', done);
-		// 	},
-		// },
+		pool: {
+			afterCreate: (conn, done) => {
+				conn.run('PRAGMA foreign_keys = OFF', done);
+			},
+		},
 	},
 	production: {
 		client: 'pg',
